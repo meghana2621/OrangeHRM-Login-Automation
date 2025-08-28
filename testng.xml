@@ -1,0 +1,13 @@
+<suite name="TestSuits">
+
+ <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+	<test name="LoginTests">
+		<classes>
+			<class name="tests.LoginTest">
+			</class>
+
+		</classes>
+	</test>
+</suite>
