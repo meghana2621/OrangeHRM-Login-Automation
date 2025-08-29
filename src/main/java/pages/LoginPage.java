@@ -27,6 +27,7 @@ public class LoginPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(usernameTextBox));
         driver.findElement(usernameTextBox).sendKeys(username);
         System.out.println("Entered username: " + username);
+        
     }
     public void enterPassword(String password) {
     	driver.findElement(passwordTextBox).clear();

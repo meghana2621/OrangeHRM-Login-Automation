@@ -8,9 +8,11 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
+          <include name="testValidLogin"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testBothFieldsBlank"/>
+          <include name="testInvalidPassword"/>
+          <include name="flushReport"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

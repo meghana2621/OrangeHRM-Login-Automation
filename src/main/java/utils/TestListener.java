@@ -17,25 +17,20 @@ public class TestListener implements ITestListener {
         ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
         test.set(extentTest);
         test.get().log(Status.INFO, "Test Started");
+        System.out.println("\n=== STARTING TEST: " + result.getName() + " ===");
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         test.get().log(Status.PASS, "Test Passed");
+        System.out.println("=== PASSED: " + result.getName() + " ===\n");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         test.get().log(Status.FAIL, "Test Failed: " + result.getThrowable());
+        System.out.println("=== FAILED: " + result.getName() + " ===\n");
     }
 
-    @Override
-    public void onTestSkipped(ITestResult result) {
-        test.get().log(Status.SKIP, "Test Skipped");
-    }
-
-    @Override
-    public void onFinish(ITestContext context) {
-        extent.flush();
-    }
+   
 }

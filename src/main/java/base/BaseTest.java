@@ -1,11 +1,11 @@
 package base;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utils.Reporter;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+
 
 public class BaseTest {
 	
@@ -26,5 +26,10 @@ public class BaseTest {
 			driver.quit();
 		}
 	}
+	
+	 @AfterSuite
+	    public void flushReport() {
+	        Reporter.getInstance().flush();
+	    }
 
 }
