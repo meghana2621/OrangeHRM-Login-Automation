@@ -28,7 +28,7 @@ This is a **Selenium + TestNG automation project** for testing the **Login funct
   3. Click Login
 - **Expected Result:** Error message displayed: "Invalid credentials".
 
-### 3. Blank Username or Password (Optional)
+### 3. Blank Username or Password 
 - **Steps:**
   1. Open OrangeHRM login page
   2. Leave username or password blank
